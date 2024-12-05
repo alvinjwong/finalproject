@@ -12,7 +12,7 @@ void WikiGraph::addLink(const std::string& originalTitle, const std::string& new
     for (auto& page : pages) {
         if (page.getTitle() == originalTitle) {
             page.addLinks(newTitle);
-            return;
+           return;
         }
     }
 }

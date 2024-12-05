@@ -1,0 +1,65 @@
+\doxysection{Wiki\+Graph Class Reference}
+\hypertarget{class_wiki_graph}{}\label{class_wiki_graph}\index{WikiGraph@{WikiGraph}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_wiki_graph_a9220ae09233f65c713c2b2da34e985e4}{add\+Page}} (const \mbox{\hyperlink{class_wiki_page}{Wiki\+Page}} \&page)
+\begin{DoxyCompactList}\small\item\em This adds a page into the vector of \doxylink{class_wiki_page}{Wiki\+Page} of pages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wiki_graph_a1725d36eda15383e218a0cc43fca3fdd}{add\+Link}} (const std\+::string \&original\+Title, const std\+::string \&new\+Title)
+\begin{DoxyCompactList}\small\item\em This takes the original title of the page you are on and the title of the new wiki page you are trying to hyperlink. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_wiki_graph_ab3296ca8ebb60f61dbe9a7593644214f}{find\+Best\+Path}} (const std\+::string \&start\+Title, const std\+::string \&end\+Title)
+\begin{DoxyCompactList}\small\item\em This loops through every possible path and finds the best path from the original wiki page to the ending wiki page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wiki_graph_a1725d36eda15383e218a0cc43fca3fdd}\index{WikiGraph@{WikiGraph}!addLink@{addLink}}
+\index{addLink@{addLink}!WikiGraph@{WikiGraph}}
+\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}}
+{\footnotesize\ttfamily \label{class_wiki_graph_a1725d36eda15383e218a0cc43fca3fdd} 
+void Wiki\+Graph\+::add\+Link (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{original\+Title}{, }\item[{const std\+::string \&}]{new\+Title}{}\end{DoxyParamCaption})}
+
+
+
+This takes the original title of the page you are on and the title of the new wiki page you are trying to hyperlink. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Title,new\+Title} & both of these are const std\+::string\&\\
+\hline
+\end{DoxyParams}
+and adds on the link between these two pages. \Hypertarget{class_wiki_graph_a9220ae09233f65c713c2b2da34e985e4}\index{WikiGraph@{WikiGraph}!addPage@{addPage}}
+\index{addPage@{addPage}!WikiGraph@{WikiGraph}}
+\doxysubsubsection{\texorpdfstring{addPage()}{addPage()}}
+{\footnotesize\ttfamily \label{class_wiki_graph_a9220ae09233f65c713c2b2da34e985e4} 
+void Wiki\+Graph\+::add\+Page (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_wiki_page}{Wiki\+Page}} \&}]{page}{}\end{DoxyParamCaption})}
+
+
+
+This adds a page into the vector of \doxylink{class_wiki_page}{Wiki\+Page} of pages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & This takes a reference of a Wikipage \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_wiki_graph_ab3296ca8ebb60f61dbe9a7593644214f}\index{WikiGraph@{WikiGraph}!findBestPath@{findBestPath}}
+\index{findBestPath@{findBestPath}!WikiGraph@{WikiGraph}}
+\doxysubsubsection{\texorpdfstring{findBestPath()}{findBestPath()}}
+{\footnotesize\ttfamily \label{class_wiki_graph_ab3296ca8ebb60f61dbe9a7593644214f} 
+std\+::vector$<$ std\+::string $>$ Wiki\+Graph\+::find\+Best\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Title}{, }\item[{const std\+::string \&}]{end\+Title}{}\end{DoxyParamCaption})}
+
+
+
+This loops through every possible path and finds the best path from the original wiki page to the ending wiki page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Title,end\+Title} & this takes const std\+::string\& for both of these parameters\\
+\hline
+\end{DoxyParams}
+This function first starts with setting the current path and the visited path of start\+Title, because that is where we first begin This also adds the current place we are at into a \{start\} path. After it checks if there are more paths to go through, and selects the last \{wikipedia paths\} that is in the paths vector. It gets rid of the current paths vector so it won\textquotesingle{}t loop again, and then it takes the last page/room of the \{currentpath\} path, for ex\+: \{pencil, lead\} will take lead, and then it will check it against the final end\+Title and see if it matches. If it matches, thats the best path, if else, we continue. We then find the page that the part of the path is at, and get all the links that are linked to that page. After we check all of the links to see if we had been there before. If we have not been there, we continue. We then add the next link to the visitedpath vector so we will not loop that page again, and then we create a copy of the place we are at and the path of pages we were on, and we add on the next link we were about to go to onto that copy of the path for a new path. We then add this new path into our paths vector and update what paths we have to traverse. we also go back to the for loop and check if the originalpath had any other links to other pages, and we repeat the checking for visits, creation of new paths, and adding new paths onto paths vector for every link. We repeat this process until we reach the end and determine the best path. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wikigraph.\+h\item 
+wikigraph.\+cpp\end{DoxyCompactItemize}

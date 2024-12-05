@@ -1,0 +1,81 @@
+\doxysection{Wiki\+Page Class Reference}
+\hypertarget{class_wiki_page}{}\label{class_wiki_page}\index{WikiPage@{WikiPage}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wiki_page_a0ac5109d868b8c2b6eb214f8da6492ee}{Wiki\+Page}} (const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_wiki_page}{Wiki\+Page}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_wiki_page_a8bf32cc223c46628284d5a4a05ef0e5c}{get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em It allows other functions to use the title from the wikipages to check. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_wiki_page_a7c5fe320b7821ede7715bea5aa1099df}{get\+All\+Links}} () const
+\begin{DoxyCompactList}\small\item\em this function returns all the links that is on the wiki page \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wiki_page_aa756be6be538a817427910e470aba3a7}{add\+Links}} (const std\+::string \&link)
+\begin{DoxyCompactList}\small\item\em It adds the link to the wiki page, allowing others to access it. It creates a reference to the std\+::string link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_wiki_page_a0ac5109d868b8c2b6eb214f8da6492ee}\index{WikiPage@{WikiPage}!WikiPage@{WikiPage}}
+\index{WikiPage@{WikiPage}!WikiPage@{WikiPage}}
+\doxysubsubsection{\texorpdfstring{WikiPage()}{WikiPage()}}
+{\footnotesize\ttfamily \label{class_wiki_page_a0ac5109d868b8c2b6eb214f8da6492ee} 
+Wiki\+Page\+::\+Wiki\+Page (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_wiki_page}{Wiki\+Page}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & a constant std\+::string that represents the title of the wiki page. It passes a reference. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wiki_page_aa756be6be538a817427910e470aba3a7}\index{WikiPage@{WikiPage}!addLinks@{addLinks}}
+\index{addLinks@{addLinks}!WikiPage@{WikiPage}}
+\doxysubsubsection{\texorpdfstring{addLinks()}{addLinks()}}
+{\footnotesize\ttfamily \label{class_wiki_page_aa756be6be538a817427910e470aba3a7} 
+void Wiki\+Page\+::add\+Links (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{link}{}\end{DoxyParamCaption})}
+
+
+
+It adds the link to the wiki page, allowing others to access it. It creates a reference to the std\+::string link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & a function that takes a constant std\+::string of the link that you want to add into the wiki page \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_wiki_page_a7c5fe320b7821ede7715bea5aa1099df}\index{WikiPage@{WikiPage}!getAllLinks@{getAllLinks}}
+\index{getAllLinks@{getAllLinks}!WikiPage@{WikiPage}}
+\doxysubsubsection{\texorpdfstring{getAllLinks()}{getAllLinks()}}
+{\footnotesize\ttfamily \label{class_wiki_page_a7c5fe320b7821ede7715bea5aa1099df} 
+std\+::vector$<$ std\+::string $>$ Wiki\+Page\+::get\+All\+Links (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+this function returns all the links that is on the wiki page 
+
+\begin{DoxyReturn}{Returns}
+this function returns all std\+::vector$<$std\+::string$>$ links 
+\end{DoxyReturn}
+\Hypertarget{class_wiki_page_a8bf32cc223c46628284d5a4a05ef0e5c}\index{WikiPage@{WikiPage}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!WikiPage@{WikiPage}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily \label{class_wiki_page_a8bf32cc223c46628284d5a4a05ef0e5c} 
+std\+::string Wiki\+Page\+::get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+It allows other functions to use the title from the wikipages to check. 
+
+\begin{DoxyReturn}{Returns}
+this function returns the title of the wikipage
+\end{DoxyReturn}
+whether it is able to create a wiki ladder 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wikipage.\+h\item 
+wikipage.\+cpp\end{DoxyCompactItemize}
